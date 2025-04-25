@@ -3,8 +3,8 @@ name: Run Tests on Code Change
 on:
   push:
     branches: [main]
-    paths:
-      - '*/**'        # 仓库中任何文件发生改变时都会触发工作流
+    #paths:
+      # - '*/**'        # 仓库中任何文件发生改变时都会触发工作流
 
 jobs:
   test:
