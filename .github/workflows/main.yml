@@ -6,17 +6,9 @@ on:
     #paths:
       # - '*/**'        # 仓库中任何文件发生改变时都会触发工作流
 jobs:
-  build:
-    # 仅在 head_commit 存在且包含文件变更时运行
-      if: |
-        github.event.head_commit != null &&
-        (github.event.head_commit.modified ||
-         github.event.head_commit.added ||
-         github.event.head_commit.removed)
-
-      runs-on: ubuntu-latest
-      steps:
+  lzx:
+    runs-on: ubuntu-latest
+    steps:
       - name: run if the file changed
         run: |
-         echo "$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S') \t检测到文件变更，触发工作流！"
-         
+         echo "检测到文件变更，触发工作流！"
