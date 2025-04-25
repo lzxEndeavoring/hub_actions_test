@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '*/**'        # 仅当 src 目录下的代码变更时触发
+      - '*/**'        # 仓库中任何文件发生改变时都会触发工作流
 
 jobs:
   test:
