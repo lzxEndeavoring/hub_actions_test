@@ -1,0 +1,17 @@
+name: Run Tests on Code Change
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'        # 仅当 src 目录下的代码变更时触发
+      - 'test/**'       # 或测试文件变更时触发
+      - 'package.json'  # 依赖文件变更时也触发
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run if the file changed
+        run: |
+         echo "检测到文件变更，触发工作流！"
