@@ -12,4 +12,5 @@ jobs:
     steps:
       - name: run if the file changed
         run: |
-         echo "检测到文件变更，触发工作流！"
+         echo "$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S') \t检测到文件变更，触发工作流！"
+         
